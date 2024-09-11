@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - DeFi App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>DeFi Dashboard</h1>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h2>Connect to MetaMask</h2>
+            <button id="connectMetamask">Connect Wallet</button>
+            <p id="accountInfo"></p>
+        </div>
+
+        <div>
+            <h2>Your Balance</h2>
+            <p id="balance"></p>
+        </div>
+
+        <div>
+            <h2>Token Swap</h2>
+            <form id="tokenSwapForm">
+                <label for="fromToken">From Token:</label>
+                <input type="text" id="fromToken" name="fromToken" required>
+                
+                <label for="toToken">To Token:</label>
+                <input type="text" id="toToken" name="toToken" required>
+
+                <button type="submit">Swap Tokens</button>
+            </form>
+            <p id="swapResult"></p>
+        </div>
+
+        <div>
+            <h2>Transaction History</h2>
+            <ul id="transactionHistory"></ul>
+        </div>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.55/dist/web3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
